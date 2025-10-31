@@ -111,6 +111,8 @@ form.d-flex .search-inp {
   width: 250px;
   border: 1px solid #ccc;
   transition: 0.3s ease;
+  height: 40px; /* fix height */
+  box-sizing: border-box; /* padding included in height */
 }
 
 form.d-flex .search-btn {
@@ -119,6 +121,8 @@ form.d-flex .search-btn {
   border-radius: 25px !important;
   padding: 0 1rem !important;
   border: none;
+  height: 40px; /* same as input */
+  line-height: 40px; /* vertical center text */
   transition: 0.2s ease;
 }
 
@@ -126,9 +130,15 @@ form.d-flex .search-btn:hover {
   background-color: #ff5a60 !important;
 }
 
+/* Responsive */
 @media (max-width: 992px) {
   form.d-flex .search-inp {
     width: 180px !important;
+    height: 36px; /* adjust for smaller screen */
+  }
+  form.d-flex .search-btn {
+    height: 36px; /* match input */
+    line-height: 36px;
   }
 }
 
@@ -146,8 +156,14 @@ form.d-flex .search-btn:hover {
 
   form.d-flex .search-inp {
     margin-bottom: 0.5rem;
+    height: 40px; /* maintain consistent height */
+  }
+  form.d-flex .search-btn {
+    height: 40px; /* match input */
+    line-height: 40px;
   }
 }
+
 
 /* =========================
    Filters
