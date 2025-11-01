@@ -410,3 +410,56 @@ form.d-flex .search-btn:hover {
   padding: 1rem 0;
 }
 
+/* =========================
+   Fix for Edit & Delete Buttons
+========================= */
+.edit-delete-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem; /* space between buttons */
+  margin-top: 1rem;
+}
+
+.edit-btn,
+.delete-btn {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+/* Edit Button */
+.edit-btn {
+  background-color: #fe424d !important;
+  color: #fff !important;
+}
+
+.edit-btn:hover {
+  background-color: #ff5a60 !important;
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: #222 !important;
+  color: #fff !important;
+}
+
+.delete-btn:hover {
+  background-color: #444 !important;
+}
+
+/* Mobile alignment */
+@media (max-width: 576px) {
+  .edit-delete-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .edit-btn,
+  .delete-btn {
+    width: 100%;
+  }
+}
